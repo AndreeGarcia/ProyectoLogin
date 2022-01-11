@@ -4,29 +4,41 @@ export const Background = styled.div`
   min-height: 692px;
   position: fixed;
   bottom: 0;
-  left: 250px;
-  right: 250px;
+  left: 300px;
+  right: 300px;
   top: 0;
   z-index: 0;
   overflow: hidden;
   background-color: #b4cad5;
 `;
 
+export const Lock = styled.div`
+  min-height: 692px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+  opacity: 9;
+`;
+
 export const Welcome = styled.h1`
   text-align: center;
   margin-top: 30px;
+  z-index: -1;
 
   font-size: 50px;
   font-weight: 800;
-  color: #97abb6;
+  color: #5a6a73;
 `;
 
 export const Container = styled.div`
   margin: 0 auto;
 
   height: 70%;
-  width: 60%;
-  border: 3px solid black;
+  width: 80%;
 
   display: flex;
   justify-content: space-between;
@@ -58,13 +70,13 @@ export const SubMiniTextGroup = styled.div`
 export const Text = styled.p`
   font-size: 20px;
   color: black;
+  margin-left: 10px;
 `;
 
 export const BoldText = styled.p`
-font-size: 20px;
-font-weight: 800:
-color: #97abb6;
-
+  font-size: 20px;
+  font-weight: 800;
+  color: #5a6a73;
 `;
 
 export const SubMiniContainer2 = styled.div`
@@ -83,8 +95,9 @@ export const SubMiniContainer3 = styled.div`
   flex-direction: column;
   justify-content: space-around;
 `;
-export const SubContainerImage = styled.img`
-  height: 90%;
-  width: 90%;
-  background-color: white;
+export const SubContainerImage = styled.div`
+  height: 100%;
+  width: 100%;
+  background-image: url("https://randomuser.me/api/portraits/women/80.jpg");
+  background-repeat: no-repeat, repeat;
 `;

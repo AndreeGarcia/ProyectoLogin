@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 import {
@@ -15,7 +17,10 @@ function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   function loginClicked(event) {
+    console.log(username, password);
     event.preventDefault();
     axios
       .post("http://localhost:5000/login", {
@@ -24,6 +29,8 @@ function LoginPage() {
       })
       .then((data) => {
         console.log(data);
+
+        navigate("/user");
       });
   }
 

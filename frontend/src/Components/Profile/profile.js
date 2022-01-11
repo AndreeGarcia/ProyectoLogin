@@ -22,15 +22,15 @@ function ProfilePage() {
           <SubContainer>
             <SubMiniTextGroup>
               <BoldText> Username: </BoldText>
-              <Text></Text>
+              <Text> admin </Text>
             </SubMiniTextGroup>
             <SubMiniTextGroup>
               <BoldText> Full name: </BoldText>
-              <Text></Text>
+              <Text> administrator </Text>
             </SubMiniTextGroup>
             <SubMiniTextGroup>
               <BoldText> Email: </BoldText>
-              <Text></Text>
+              <Text> admin@admin.com </Text>
             </SubMiniTextGroup>
           </SubContainer>
           <SubContainer2>
@@ -40,11 +40,11 @@ function ProfilePage() {
             <SubMiniContainer3>
               <SubMiniTextGroup>
                 <BoldText> Biography: </BoldText>
-                <Text></Text>
+                <Text> hey </Text>
               </SubMiniTextGroup>
               <SubMiniTextGroup>
                 <BoldText> Pet: </BoldText>
-                <Text></Text>
+                <Text> dog </Text>
               </SubMiniTextGroup>
             </SubMiniContainer3>
           </SubContainer2>

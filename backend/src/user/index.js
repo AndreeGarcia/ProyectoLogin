@@ -1,10 +1,9 @@
-//const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 
 async function getUserData() {
   return {
     username: "admin",
-    //password: await bcrypt.hash("password", 10),
-    password: "password",
+    password: await bcrypt.hash("password", 10),
     email: "admin@admin.com",
     photo: "https://randomuser.me/api/portraits/women/80.jpg",
     fullname: "administrator",
