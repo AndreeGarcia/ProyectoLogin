@@ -29,7 +29,6 @@ function LoginPage() {
       })
       .then((data) => {
         console.log(data);
-
         navigate("/user");
       });
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import {
   Background,
   Welcome,
@@ -14,6 +15,8 @@ import {
 } from "./profileElements";
 
 function ProfilePage() {
+  fetch("http://localhost:5000/user").then;
+
   return (
     <>
       <Background>
