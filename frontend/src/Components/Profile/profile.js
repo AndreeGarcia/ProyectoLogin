@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import {
   Background,
   Welcome,
@@ -15,8 +16,39 @@ import {
 } from "./profileElements";
 
 function ProfilePage() {
-  fetch("http://localhost:5000/user").then;
+  const userData = [];
+  async function getUser(URL) {
+    try {
+      const response = await fetch(URL);
+      const data = await response.json();
 
+      const username = data.map((a) => {
+        return a.username;
+      });
+
+      const password = data.map((a) => {
+        return a.password;
+      });
+      const email = data.map((a) => {
+        return a.email;
+      });
+      const fullname = data.map((a) => {
+        return a.fullname;
+      });
+      const biography = data.map((a) => {
+        return a.biography;
+      });
+      const pet = data.map((a) => {
+        return a.pet;
+      });
+
+      userData.push(username, password, email, fullname, biography, pet);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  getUser("https://localhost:5000/user");
   return (
     <>
       <Background>
@@ -33,7 +65,7 @@ function ProfilePage() {
             </SubMiniTextGroup>
             <SubMiniTextGroup>
               <BoldText> Email: </BoldText>
-              <Text> admin@admin.com </Text>
+              <Text> admin@admin.com</Text>
             </SubMiniTextGroup>
           </SubContainer>
           <SubContainer2>
